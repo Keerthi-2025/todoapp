@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -33,5 +34,24 @@ public class TodoController {
                 .build();
         todoRepository.save(newTodo);
         return "redirect:/";
+    }
+
+    @GetMapping("/update/{id}")
+    public  String update(@PathVariable Long id){
+        TodoEntity existingTable= todoRepository.findById(id)
+                .orElseGet(()-> new RuntimeException("Todo not found:"+id));
+
+        existingTable.setCompleted(true);
+        todoRepository.save(existingTable);
+        return "redirect:/";
+    }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable Long id){
+        TodoEntity existingTable= todoRepository.findById(id)
+                .orElseGet(()-> new RuntimeException("Todo not found:"+id));
+        todoRepository.delete(existingTable);
+        return  "redirect:/";
+
     }
 }
