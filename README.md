@@ -53,7 +53,7 @@ Wait for the project to load and for Maven dependencies to finish syncing
 Open the TodoappApplication.java file (usually under src/main/java/...)
 Click the green "Run" button next to the class
 
-🔹 **Step 7: **Access the App in Browser
+🔹 **Step 7:** Access the App in Browser
 Once the app runs, open your browser
 
 Go to: http://localhost:8080 - You should see your Todo App interface
