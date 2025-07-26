@@ -23,6 +23,42 @@ A simple **To-Do List Web Application** built using **Spring Boot** and **HTML (
 
 ---
 
+Steps to Clone a GitHub Project and Use It in Spring Boot
+🔹 Step 1: Install Git
+Download and install Git from https://git-scm.com
+
+🔹 Step 2: Copy the Repository URL
+Go to your GitHub repo: https://github.com/Keerthi-2025/todoapp
+Click the green "Code" button
+Copy the HTTPS link (it looks like https://github.com/Keerthi-2025/todoapp.git)
+
+🔹 Step 3: Open Git Bash, Terminal, or Command Prompt
+Navigate to the folder where you want to save your project locally
+
+🔹 Step 4: Clone the Repository
+Run the git clone command with your repo link
+
+🔹 Step 5: Open the Project in Your IDE
+You can use IntelliJ IDEA or Eclipse for Spring Boot.
+
+For IntelliJ:
+Open IntelliJ IDEA
+Click "Open"
+Browse to the todoapp folder and open it
+Wait for the project to load and for Maven dependencies to finish syncing
+
+🔹 Step 6: Build and Run the Application
+In IntelliJ:
+Open the TodoappApplication.java file (usually under src/main/java/...)
+Click the green "Run" button next to the class
+
+🔹 Step 7: Access the App in Browser
+Once the app runs, open your browser
+
+Go to: http://localhost:8080 - You should see your Todo App interface
+
+
+
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
